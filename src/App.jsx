@@ -19,7 +19,8 @@ function App() {
       return (
         {
           ...prevValues,
-          [param]: event.target.value
+          // convert String to Number
+          [param]: Number(event.target.value)
         }
       )
     })

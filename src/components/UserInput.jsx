@@ -1,5 +1,3 @@
-import InputField from './InputField'
-
 function UserInput({investmentState, onParamChange}){
 	const {initialInvestment, 
 		annualInvestment, 
