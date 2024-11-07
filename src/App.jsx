@@ -14,13 +14,13 @@ function App() {
     duration: 10
   })
 
-  function handleParamChange(param, event){
+  function handleParamChange(param, newValue){
     setInvestmentParams((prevValues) => {
       return (
         {
           ...prevValues,
           // convert String to Number
-          [param]: Number(event.target.value)
+          [param]: Number(newValue)
         }
       )
     })
@@ -45,7 +45,7 @@ function App() {
       {(investmentParams.duration <= 0) ?
         <p className="center">Please input a valid duration</p> :
         <ResultsTable 
-          investmentDataArray={investmentData}
+          investmentState={investmentParams}
           className="center"
         />
       }

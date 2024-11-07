@@ -1,5 +1,4 @@
-import { formatter } from "../util/investment";
-
+import { calculateInvestmentResults, formatter } from "../util/investment";
 
 function expandDataArray(originalArray){
 	let totalInterest = 0;
@@ -14,8 +13,9 @@ function expandDataArray(originalArray){
 	return originalArray;
 }
 
-
-function ResultsTable({investmentDataArray}){
+function ResultsTable({investmentState}){
+	const investmentDataArray = calculateInvestmentResults(investmentState)
+	
 	const expandedDataArray = expandDataArray(investmentDataArray);
 
 	return(

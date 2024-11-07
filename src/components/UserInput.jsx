@@ -12,7 +12,7 @@ function UserInput({investmentState, onParamChange}){
 					<input 
 						type="number" 
 						value={initialInvestment}					
-						onChange={(event) => onParamChange('initialInvestment', event)}
+						onChange={(event) => onParamChange('initialInvestment', event.target.value)}
 						required
 					>
 					</input>
@@ -22,7 +22,7 @@ function UserInput({investmentState, onParamChange}){
 					<input
 					 	type="text" 
 						value={annualInvestment}
-						onChange={(event) => onParamChange('annualInvestment', event)}	
+						onChange={(event) => onParamChange('annualInvestment', event.target.value)}	
 						required
 					>	
 					</input>
@@ -35,7 +35,7 @@ function UserInput({investmentState, onParamChange}){
 					<input 
 						type="text" 
 						value={expectedReturn}
-						onChange={(event) => onParamChange('expectedReturn', event)}
+						onChange={(event) => onParamChange('expectedReturn', event.target.value)}
 						required
 					>		
 					</input>
@@ -45,7 +45,7 @@ function UserInput({investmentState, onParamChange}){
 					<input 
 						type="number" 
 						value={duration}
-						onChange={(event) => onParamChange('duration', event)}	
+						onChange={(event) => onParamChange('duration', event.target.value)}	
 						required
 					></input>
 				</span>
