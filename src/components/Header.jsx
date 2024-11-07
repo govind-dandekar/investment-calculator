@@ -1,6 +1,5 @@
 import investmentCalcLogo from '../assets/investment-calculator-logo.png'
 
-
 function Header(){
 	return (
 		<header id="header">
